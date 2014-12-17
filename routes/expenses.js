@@ -45,7 +45,23 @@ router.get('/bycategory', function(req, res){
 		byCategory.Total = totalExpense;
 		console.log("groupByCategory" + byCategory);
 		
-		return byCategory;
+		res.json(byCategory);
 	});
 
+	
+router.get('/bycategory/:category_id', function(req, res){
+	      var icategory = req.params.category_id;
+		 var byCategory = [];
+		  for(i in expenses){
+			if(expenses[i].category == icategory){
+				byCategory.push(expenses[i]);
+			}
+		  }
+		console.log("groupByCategory" + byCategory);
+		
+		res.json(byCategory);
+	});
+	
+	
+	
 module.exports = router;
