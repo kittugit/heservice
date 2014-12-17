@@ -64,5 +64,5 @@ router.get('/bycategory/:category_id', function(req, res){
 	
 	
 
-// push to codeship	
+// push to codeship - 2nd attempts	
 module.exports = router;
